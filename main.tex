@@ -1,0 +1,160 @@
+\documentclass[hidelinks, 11pt,letterpaper]{article}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[default]{opensans}
+    \usepackage{titlesec}
+    \usepackage{enumitem}
+    \usepackage{multicol}
+    \usepackage{hyperref}
+    \usepackage{geometry}
+    \usepackage{amssymb}
+    \pagestyle{empty}
+    \raggedright
+    \usepackage{hyperref}
+    
+% set title so correct title displays for any filename
+\hypersetup{
+    pdfauthor={Yiyi Shen},
+    pdftitle={Yiyi Shen Resume},
+}
+    
+\hypersetup{
+    colorlinks=false
+}
+
+% ATS parsing
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% margins
+\geometry{letterpaper, margin=0.5in}
+
+% custom \large and \Huge font sizes
+\makeatletter %only needed in preamble
+\renewcommand\large{\@setfontsize\large{13pt}{18}}
+\renewcommand\Huge{\@setfontsize\Huge{25pt}{18}}
+\makeatother
+
+% set size of the bullet for texlive 2021
+\setlist[itemize,1]{label=\large$\bullet$}
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\section}{
+  \vspace*{-13pt}\scshape\large
+}{}{0em}{}[\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}[itemsep=1pt, parsep=0pt, topsep=0pt]
+}
+
+\newcommand{\resumeItemListEnd}{
+    \end{itemize}
+}
+
+% suppress end of lines with comments (https://texfaq.org/FAQ-spinmacro)
+\newcounter{datediff}
+\newcommand{\yearsSince}[1]{%
+    \setcounter{datediff}{\year}%
+    \addtocounter{datediff}{-#1}%
+    \thedatediff%
+}
+
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%==== Profile ====%
+\begin{center}
+    {\Huge Yiyi Shen}
+    
+    \vspace{6pt}
+    765-714-4606
+    |
+    Skye\_one@hotmail.com
+    |
+    \href{https://yiyishen.com/}{yiyishen.com}
+    |
+    \href{https://www.linkedin.com/in/shen488/}{linkedin.com/in/shen488}
+\end{center}
+\vspace{-7pt}
+
+%==== Education ====%
+\section{Education}
+
+\textbf{Purdue University} \hfill \textit{Aug. 2019 -- May. 2023}
+
+B.S. in Mathematics \hfill Dean's List + Semester Honors
+
+% \textbf{Relevant coursework:} Data Structures/Algorithms, Computer Architecture, Programming in C, Competitive Programming II
+
+% \vspace{2mm}
+
+\section{Skills}
+
+\textbf{Languages:}
+Python,
+R,
+Java,
+JavaScript,
+HTML/CSS,
+XML,
+Matlab,
+Swift
+
+\textbf{Tools/Frameworks:} Git, Linux, JIRA, JUnit, SQL
+
+\textbf{Software testing}: Manual, Agile, Waterfall, Automation, Performance, Usability
+
+%==== Experience ====%
+\section{Experience}
+
+\textbf{Ningbo-Zhoushan Port (Group) Co., Ltd} \hfill Ningbo, China
+
+Test Engineer Intern \hfill \textit{May. 2022 -- Aug. 2022}
+
+\resumeItemListStart
+	\item Developed and implemented test plans for an online shopping platform hosted on a Linux server.
+	\item Performed manual and automated testing, including unit, integration, system, and regression testing. Documented and tracked bugs and issues in JIRA.
+\resumeItemListEnd
+
+\textbf{Zanhe (Shanghai) Industrial Development Co., Ltd} \hfill Shanghai, China
+
+Test Engineer Intern \hfill \textit{May. 2021 -- Aug. 2021}
+
+\resumeItemListStart
+	\item Created and executed comprehensive test plans for an IoT system, resulting in identifying and resolving numerous software defects.
+        \item Designed and executed automated regression tests for an intelligent classroom platform, resulting in a 40\% improvement in overall software quality.
+\resumeItemListEnd
+
+\textbf{Dawei Intelligent Technology Co., Ltd} \hfill Ningbo, China
+
+Assistant of general manager \hfill \textit{May. 2020 -- Dec. 2020}
+
+\resumeItemListStart
+	\item Assisted in the planning and execution of projects, including setting timelines, allocating resources, and monitoring progress.
+        \item Collaborated with cross-functional teams to ensure project success and timely delivery.
+        \item Conducted data analysis and created reports, providing valuable insights and recommendations to the General Manager.
+\resumeItemListEnd
+
+%==== Personal Projects ====%
+\section{Projects}
+
+\textbf{PostMan Website} | \emph{JavaScript, HTML/CSS, React, Node, MongoDB} \hfill \textit{Sep. 2022 -- Dec. 2022}
+
+\resumeItemListStart
+    \item Designed and developed a task-based delivery web application using React for the front end, following the MVC pattern to ensure clean and maintainable code. 
+    \item Implemented Firebase for user authentication and Socket.IO for real-time communication between users. \item Programmed over 10 RESTful APIs using Express.js, with data stored in MongoDB. 
+    \item Embedded Google Map API for route tracking, address search, and auto-fill functionality, resulting in a seamless and user-friendly delivery management experience.
+\resumeItemListEnd
+
+\textbf{Boiler Math} | \emph{Python, Flask, Swift, XPath} \hfill \textit {Jan. 2022 -- May. 2022}
+
+\resumeItemListStart
+    \item Developed a Python program to parse the HTML of Purdue Math Department's website, extracting and scraping all past exam links to compile a comprehensive database of exams.
+    \item Built RESTful APIs using Flask and stored discussions on Back4app, ensuring scalable and efficient data management. Deployed the APIs on a Linux server with Nginx, Gunicorn, and Supervisor, resulting in a high-performance and reliable API service.
+    \item Designed the GUI of an iOS application using Swift Storyboard and conducted extensive testing with real phones to ensure a seamless and user-friendly experience.
+\resumeItemListEnd
+
+	
+\end{document}
